@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CLUB GLOW | DISTRIBUIÇÃO FARMACÊUTICA & ALTA PERFORMANCE</title>
+<meta name="description" content="CLUB GLOW — DISTRIBUIÇÃO FARMACÊUTICA, MODULAÇÃO BIOLÓGICA E ALTA PERFORMANCE. ESCOLHA ENTRE ATENDIMENTO PARA VAREJO OU CONDIÇÕES DE ATACADO PARA REVENDA.">
+<meta name="theme-color" content="#16222B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E9EDEE; --bg-2:#F3F6F6; --card:#FFFFFF; --panel:#F6F8F8;
+  --ink:#16222B; --ink-2:#3A4851; --muted:#55626B; --line:#CBD3D6; --line-2:#B4BEC3;
+  --accent:#2747D8; --accent-hover:#1F3BBE; --on-ink:#F3F6F6;
+  --green:#10B981;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Archivo,system-ui,sans-serif;
+  font-stretch:100%;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent)} a:hover{color:#1A2F9A}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:24px}
+.cond{font-stretch:62%;font-weight:900;line-height:.95;margin:0;text-transform:uppercase}
+
+/* =========================================================
+   HEADER DESKTOP (ESTÁTICO / NÃO DESCE NO SCROLL)
+   ========================================================= */
+.topbar{
+  position:relative; /* NÃO FIXO / NÃO STICKY — NÃO DESCE AO ROLAR */
+  z-index:30;
+  background:var(--bg);
+  border-bottom:2px solid var(--ink);
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding-block:16px;
+}
+
+/* Logo */
+.logo{
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+  color:var(--ink);
+  flex-shrink:0;
+}
+.logo-img{
+  display:block;
+  height:78px; /* Logo imponente e de alto destaque */
+  width:auto;
+  max-width:280px;
+  object-fit:contain;
+  transition:transform .15s;
+}
+.logo:hover .logo-img{
+  transform:scale(1.02);
+}
+
+/* Navegação Desktop no Estilo da Imagem de Referência */
+.nav-desktop{
+  display:flex;
+  align-items:center;
+  gap:26px;
+  flex-wrap:nowrap;
+  margin-left:auto;
+}
+.nav-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink);
+  text-decoration:none;
+  transition:color .15s,opacity .15s;
+  white-space:nowrap;
+  position:relative;
+  padding:4px 0;
+}
+.nav-link:hover{
+  color:var(--accent);
+}
+.nav-link.active{
+  color:var(--accent);
+}
+.nav-link.active::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  right:0;
+  height:2px;
+  background:var(--accent);
+}
+.nav-instagram{
+  color:var(--ink);
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.nav-instagram:hover{
+  color:#E1306C;
+}
+
+/* Ações no Topo (WhatsApp e Menu +) */
+.topo-acoes{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-shrink:0;
+}
+.btn-wa-header{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  min-height:38px;
+  padding:0 14px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  background:var(--ink);
+  color:var(--on-ink);
+  border:1.5px solid var(--ink);
+  text-decoration:none;
+  transition:background .15s,color .15s;
+}
+.btn-wa-header:hover{
+  background:#22323D;
+  color:#fff;
+}
+.btn-menu-mobile{
+  display:none; /* Oculto no desktop */
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border:1.5px solid var(--ink);
+  border-radius:6px;
+  background:transparent;
+  color:var(--ink);
+  cursor:pointer;
+  padding:0;
+}
+.btn-menu-mobile:hover{
+  background:var(--panel);
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:46px;
+  padding:0 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:transform .15s,background .15s,border-color .15s,box-shadow .15s;
+}
+.btn-sm{min-height:42px;padding:0 18px;font-size:12px}
+.btn-lg{min-height:54px;padding:0 28px;font-size:15px}
+.btn-ink{background:var(--ink);color:var(--on-ink);border:2px solid var(--ink)}
+.btn-ink:hover{background:#22323D;border-color:#22323D;color:#fff}
+.btn-accent{background:var(--accent);color:#fff;border:2px solid var(--accent)}
+.btn-accent:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff}
+.btn-line{background:transparent;border:2px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--panel);color:var(--ink)}
+
+.btn-catalogo{
+  box-shadow:2px 2px 0 var(--ink);
+}
+.btn-catalogo:hover{
+  transform:translate(-2px,-2px);
+  box-shadow:4px 4px 0 var(--ink);
+}
+
+/* Menu Mobile */
+.btn-menu{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border:2px solid var(--ink);
+  border-radius:10px;
+  background:transparent;
+  color:var(--ink);
+  cursor:pointer;
+  padding:0;
+}
+.btn-menu:hover{background:var(--panel)}
+.menu-mobile{
+  display:none;
+  flex-direction:column;
+  background:var(--card);
+  border-bottom:2px solid var(--ink);
+  padding:12px 18px 20px;
+}
+.menu-mobile:not([hidden]){display:flex}
+.menu-mobile a{
+  display:block;
+  padding:14px 4px;
+  color:var(--ink);
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--line);
+}
+.menu-mobile a:last-child{border-bottom:0}
+
+/* =========================================================
+   FAIXA DE MARCAS (MARCAS NA LOJA)
+   ========================================================= */
+.marcas{background:var(--ink);color:#ffffff;padding:18px 0;display:flex;align-items:center}
+.marcas-label{flex:none;padding:0 20px 0 24px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#ffffff;white-space:nowrap;opacity:.85}
+.mq{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;width:max-content;animation:mq 38s linear infinite}
+.mq:hover .mq-track{animation-play-state:paused}
+.mq-group{display:flex;align-items:center}
+.mq-item{display:inline-flex;align-items:center;gap:28px;padding-right:28px;font-stretch:62%;font-weight:900;font-size:26px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;color:#ffffff}
+.mq-item::after{content:"";width:8px;height:8px;border-radius:50%;background:#ffffff;opacity:.4}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* =========================================================
+   HERO SECTION (ALTO IMPACTO & CAIXA ALTA)
+   ========================================================= */
+.hero{
+  padding-block:72px 80px;
+  display:flex;
+  flex-direction:column;
+  gap:36px;
+}
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--card);
+  border:2px solid var(--ink);
+  border-radius:999px;
+  padding:6px 16px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  align-self:flex-start;
+  box-shadow:2px 2px 0 var(--ink);
+}
+.hero-tag .live-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent);
+}
+.hero h1{
+  font-size:clamp(60px,10vw,144px);
+  line-height:.86;
+  letter-spacing:-.02em;
+  margin:0;
+  color:var(--ink);
+}
+.hero-desc{
+  margin:0;
+  max-width:38em;
+  font-size:19px;
+  line-height:1.5;
+  font-weight:700;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Highlights Grid Sob o Hero */
+.hero-badges{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:16px;
+  margin-top:10px;
+}
+.hero-badge-item{
+  background:var(--card);
+  border:2px solid var(--ink);
+  border-radius:12px;
+  padding:18px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  box-shadow:3px 3px 0 var(--ink);
+}
+.hero-badge-item strong{
+  font-stretch:62%;
+  font-weight:900;
+  font-size:32px;
+  line-height:1;
+  color:var(--ink);
+  text-transform:uppercase;
+}
+.hero-badge-item span{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* =========================================================
+   DUAL PATH SECTION (PARA VOCÊ / PARA SUA REVENDA)
+   ========================================================= */
+.dual-path{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:var(--ink);
+  color:var(--on-ink);
+  padding-block:88px 104px;
+  border-top:2px solid var(--ink);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.dual-path::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0 auto 0 0;
+  width:9px;
+  background:var(--accent);
+}
+.dual-path::after{
+  content:"CG";
+  position:absolute;
+  z-index:-1;
+  right:clamp(12px,7vw,110px);
+  bottom:-.28em;
+  font-size:clamp(190px,30vw,430px);
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-.09em;
+  color:rgba(243,246,246,.045);
+  pointer-events:none;
+}
+.dual-path .wrap{
+  position:relative;
+  display:flex;
+  flex-wrap:wrap;
+  gap:48px;
+  align-items:center;
+}
+.dual-path-main{
+  flex:999 1 540px;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.dual-path .eyebrow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#B9C4CA;
+}
+.dual-path .eyebrow::before{
+  content:"";
+  display:block;
+  width:28px;
+  height:2px;
+  background:var(--accent);
+}
+.dual-path h2{
+  font-size:clamp(46px,7vw,92px);
+  line-height:.9;
+  letter-spacing:-.035em;
+  margin:0;
+  color:var(--on-ink);
+}
+.dual-path h2 .accent{color:#8FA2FF}
+.dual-path p{
+  margin:0;
+  max-width:34em;
+  font-size:17px;
+  line-height:1.55;
+  font-weight:700;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  color:#D0D9DD;
+}
+.dual-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px}
+.dual-btn{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  min-height:80px;
+  padding:16px 28px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  transition:transform .15s,background .15s,border-color .15s,box-shadow .15s;
+}
+.dual-btn span{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.85;
+}
+.dual-btn strong{
+  font-stretch:62%;
+  font-size:22px;
+  font-weight:900;
+  line-height:1.15;
+  margin-top:4px;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+}
+.dual-btn-primary{
+  background:var(--accent);
+  color:#fff;
+  border:2px solid var(--accent);
+}
+.dual-btn-primary:hover{
+  background:#1F3BBE;
+  border-color:#1F3BBE;
+  color:#fff;
+  transform:translate(-3px,-3px);
+  box-shadow:4px 4px 0 #000;
+}
+.dual-btn-secondary{
+  background:transparent;
+  border:2px solid #AAB7BE;
+  color:var(--on-ink);
+}
+.dual-btn-secondary:hover{
+  background:rgba(255,255,255,.08);
+  border-color:#fff;
+  color:#fff;
+  transform:translate(-3px,-3px);
+  box-shadow:4px 4px 0 #000;
+}
+
+/* =========================================================
+   SEÇÃO DE VANTAGENS / DIFERENCIAIS
+   ========================================================= */
+.vantagens{
+  background:var(--bg-2);
+  border-bottom:2px solid var(--ink);
+  padding-block:72px 80px;
+}
+.vantagens-head{
+  margin-bottom:36px;
+}
+.vantagens-head p{
+  margin:0 0 8px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.vantagens-head h2{
+  font-size:clamp(36px,5vw,56px);
+  margin:0;
+}
+.vantagens-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.vantagem-card{
+  background:var(--card);
+  border:2px solid var(--ink);
+  border-radius:14px;
+  padding:28px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  box-shadow:3px 3px 0 var(--ink);
+}
+.v-num{
+  font-stretch:62%;
+  font-weight:900;
+  font-size:36px;
+  color:var(--accent);
+  line-height:1;
+}
+.vantagem-card h3{
+  margin:0;
+  font-stretch:62%;
+  font-weight:900;
+  font-size:24px;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+}
+.vantagem-card p{
+  margin:0;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.55;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+}
+
+/* =========================================================
+   RODAPÉ INSTITUCIONAL CLUB GLOW
+   ========================================================= */
+footer{
+  position:relative;
+  background:#090E14; /* Fundo obsidian escuro contrastando com a seção anterior */
+  color:#C9D3D8;
+  border-top:1px solid rgba(255,255,255,0.12);
+}
+footer::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:2px;
+  background:linear-gradient(90deg, transparent 0%, var(--accent) 25%, #00d4ff 50%, var(--accent) 75%, transparent 100%);
+  opacity:0.85;
+}
+footer .wrap{
+  padding-block:72px 48px;
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+}
+.footer-corpo{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:36px;
+}
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  max-width:440px;
+}
+.footer-logo{
+  font-stretch:62%;
+  font-weight:900;
+  font-size:36px;
+  color:#fff;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+}
+.footer-brand p{
+  margin:0;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  line-height:1.6;
+  color:#A9B6BE;
+}
+.footer-col{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.footer-col strong{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#fff;
+  margin-bottom:4px;
+}
+.footer-col a{
+  color:#A9B6BE;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:color .15s;
+}
+.footer-col a:hover{color:#fff}
+.footer-bottom{
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#7B8890;
+}
+
+/* =========================================================
+   RESPONSIVIDADE (MOBILE & TABLET)
+   ========================================================= */
+@media(max-width:860px){
+  .nav-desktop{display:none}
+  .btn-menu-mobile{display:inline-flex}
+}
+@media(max-width:768px){
+  .wrap{padding-inline:16px}
+  .topbar-inner{padding-block:12px;gap:12px}
+  .hero{padding-block:40px 48px;gap:24px}
+  .hero-desc{font-size:16px}
+  .hero-badges{grid-template-columns:repeat(2,1fr);gap:10px}
+  .hero-badge-item{padding:14px}
+  .hero-badge-item strong{font-size:26px}
+  .dual-path{padding-block:52px 60px}
+  .dual-actions{flex-direction:column}
+  .dual-btn{width:100%;min-height:68px}
+  .vantagens{padding-block:48px 56px}
+  .vantagens-grid{grid-template-columns:1fr;gap:14px}
+}
+@media(max-width:480px){
+  .btn-wa-header .wa-txt{display:none}
+  .btn-wa-header{padding:0 10px;min-height:36px}
+  .logo-img{height:46px;max-width:150px}
+  .hero h1{font-size:clamp(44px,14vw,68px)}
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .hero-badges{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER DESKTOP (ESTÁTICO / NÃO DESCE AO ROLAR) -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <!-- Logotipo da Marca (preparado para JPEG ou SVG) -->
+    <a class="logo" href="index.html" aria-label="CLUB GLOW — Início">
+      <img src="glowclub-logo.svg" alt="Club Glow" width="260" height="78" class="logo-img" id="site-logo">
+    </a>
+
+    <!-- Navegação (Atacado, Varejo, Marcas, Conteúdos, Ferramentas, Instagram) -->
+    <nav class="nav-desktop" aria-label="Navegação Principal">
+      <a href="atacado.html" class="nav-link">Atacado</a>
+      <a href="varejo.html" class="nav-link">Varejo</a>
+      <a href="#marcas" class="nav-link">Marcas</a>
+      <a href="#conteudos" class="nav-link">Conteúdos</a>
+      <a href="#ferramentas" class="nav-link">Ferramentas</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="nav-link nav-instagram" aria-label="Instagram">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <span>Instagram</span>
+      </a>
+    </nav>
+
+    <!-- Ações à Direita: WhatsApp e Botão Mobile (somente no mobile) -->
+    <div class="topo-acoes">
+      <a class="btn-wa-header" data-wa href="#" aria-label="WhatsApp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        <span class="wa-txt">WhatsApp</span>
+      </a>
+      <button type="button" class="btn-menu-mobile" id="btn-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <svg class="ico-abrir" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ico-fechar" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" hidden><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menu Mobile Suspenso (somente telas menores que 860px) -->
+  <nav class="menu-mobile" id="menu-mobile" aria-label="Menu mobile" hidden>
+    <a href="atacado.html" data-fecha-menu>Atacado</a>
+    <a href="varejo.html" data-fecha-menu>Varejo</a>
+    <a href="#marcas" data-fecha-menu>Marcas</a>
+    <a href="#conteudos" data-fecha-menu>Conteúdos</a>
+    <a href="#ferramentas" data-fecha-menu>Ferramentas</a>
+    <a href="https://instagram.com" target="_blank" rel="noopener" data-fecha-menu>Instagram ↗</a>
+    <a data-wa href="#" data-fecha-menu>WhatsApp</a>
+  </nav>
+</header>
+
+<!-- FAIXA DE MARCAS (APENAS NOMES EM BRANCO) -->
+<section class="marcas" aria-label="Marcas na loja">
+  <span class="marcas-label">MARCAS NA LOJA</span>
+  <div class="mq"><div class="mq-track" id="marcas"></div></div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main id="inicio">
+
+  <!-- HERO SECTION -->
+  <section class="wrap hero">
+    <div class="hero-tag">
+      <span class="live-dot"></span>
+      <span>DISTRIBUIÇÃO FARMACÊUTICA & PERFORMANCE DE ELITE</span>
+    </div>
+
+    <h1 class="cond">CLUB GLOW.</h1>
+
+    <p class="hero-desc">
+      ENCONTRE O CAMINHO IDEAL PARA VOCÊ. ACESSE NOSSO CATÁLOGO DE VAREJO COM MAIS DE 840 COMPOSTOS DE ALTA PUREZA OU CONHEÇA AS CONDIÇÕES EXCLUSIVAS PARA REVENDEDORES.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-accent btn-lg" href="varejo.html">
+        <span>ACESSAR CATÁLOGO VAREJO (840+ ITENS)</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a class="btn btn-line btn-lg" href="atacado.html">
+        <span>QUERO SER REVENDEDOR / ATACADO</span>
+      </a>
+    </div>
+
+    <!-- CARDS DE DESTAQUE / IMPACTO VISUAL -->
+    <div class="hero-badges">
+      <div class="hero-badge-item">
+        <strong>+840</strong>
+        <span>PRODUTOS NO CATÁLOGO</span>
+      </div>
+      <div class="hero-badge-item">
+        <strong>CLIMATIZADO</strong>
+        <span>ENVIO DE 2°C A 8°C</span>
+      </div>
+      <div class="hero-badge-item">
+        <strong>DIRETO</strong>
+        <span>SUPORTE VIA WHATSAPP</span>
+      </div>
+      <div class="hero-badge-item">
+        <strong>5% OFF</strong>
+        <span>DESCONTO NO PAGAMENTO PIX</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DUAL PATH SECTION -->
+  <section class="dual-path" aria-label="Escolha o caminho">
+    <div class="wrap">
+      <div class="dual-path-main">
+        <p class="eyebrow">CLUB GLOW · DISTRIBUIÇÃO OFICIAL</p>
+        <h2 class="cond">PARA VOCÊ.<br><span class="accent">PARA SUA REVENDA.</span></h2>
+        <p>
+          ATENDIMENTO DIRETO E PERSONALIZADO, COM PÁGINAS SEPARADAS PARA QUEM COMPRA NO VAREJO OU DESEJA REVENDER NO ATACADO COM MARGENS DIFERENCIADAS. ESCOLHA COMO COMEÇAR.
+        </p>
+        <div class="dual-actions">
+          <a class="dual-btn dual-btn-primary" href="varejo.html">
+            <span>VAREJO</span>
+            <strong>COMPRAR NO VAREJO (840+ ITENS) ↗</strong>
+          </a>
+          <a class="dual-btn dual-btn-secondary" href="atacado.html">
+            <span>REVENDA / ATACADO</span>
+            <strong>SOU REVENDEDOR ↗</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- RODAPÉ INSTITUCIONAL CLUB GLOW -->
+<footer id="contato">
+  <div class="wrap">
+    <div class="footer-corpo">
+      <div class="footer-brand">
+        <div class="footer-logo cond">CLUB GLOW</div>
+        <p>DISTRIBUIÇÃO FARMACÊUTICA & MODULAÇÃO BIOLÓGICA DE ALTA PERFORMANCE.</p>
+        <p>ENVIO DISCRETO, CLIMATIZADO E 100% RASTREADO PARA TODO O TERRITÓRIO NACIONAL.</p>
+      </div>
+      <div class="footer-col">
+        <strong>NAVEGAÇÃO</strong>
+        <a href="index.html">INÍCIO</a>
+        <a href="varejo.html">CATÁLOGO VAREJO</a>
+        <a href="atacado.html">REVENDEDOR / ATACADO</a>
+      </div>
+      <div class="footer-col">
+        <strong>LINHAS EM DESTAQUE</strong>
+        <a href="varejo.html#produtos">EMAGRECEDORES & GLP-1</a>
+        <a href="varejo.html#produtos">PEPTÍDEOS BIOMIMÉTICOS</a>
+        <a href="varejo.html#produtos">ANABOLIZANTES & HORMÔNIOS</a>
+      </div>
+      <div class="footer-col">
+        <strong>ATENDIMENTO</strong>
+        <a data-wa href="#">SUPORTE WHATSAPP</a>
+        <a data-wa href="#">CONSULTA DE DISPONIBILIDADE</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>CLUB GLOW © 2026 · TODOS OS DIREITOS RESERVADOS.</span>
+      <span>DISTRIBUIÇÃO FARMACÊUTICA ESPECIALIZADA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const CONFIG = {
+  whatsapp: '',            // só números, com DDI e DDD. Ex.: '5545999999999'
+  marca: 'CLUB GLOW',
+  descontoPix: 5,          // % de desconto no PIX (0 para não mostrar)
+  parcelas: 12,            // nº de parcelas sem juros no cartão (0 ou 1 para não mostrar)
+  marcas: [
+    'Nacional',
+    'Biovant',
+    'Peptigen',
+    'Cooper Pharma',
+    'Landerlan Gold',
+    'ZPHC',
+    'Oxygen KW',
+    'Neuroceptix',
+    'King Pharma',
+    'Bratva Labs',
+    'Novax',
+    'Quimfa',
+    'Pharmacom Labs'
+  ]
+};
+
+const wa = (texto) => 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(texto);
+document.querySelectorAll('[data-wa]').forEach(a => {
+  a.href = wa(`Olá! Vim pelo site da ${CONFIG.marca} e quero tirar uma dúvida.`);
+  a.target = '_blank';
+  a.rel = 'noopener';
+});
+
+// Faixa de marcas (apenas nomes em texto branco)
+const track = document.getElementById('marcas');
+[false, true].forEach(dup => {
+  const group = document.createElement('div');
+  group.className = 'mq-group';
+  if (dup) group.setAttribute('aria-hidden', 'true');
+  CONFIG.marcas.forEach(m => {
+    const item = document.createElement('span');
+    item.className = 'mq-item';
+    item.textContent = typeof m === 'string' ? m : (m.nome || '');
+    group.appendChild(item);
+  });
+  track.appendChild(group);
+});
+
+// Menu mobile / gaveta
+(() => {
+  const button = document.getElementById('btn-menu');
+  const menu = document.getElementById('menu-mobile');
+  if (!button || !menu) return;
+  const iconAbrir = button.querySelector('.ico-abrir');
+  const iconFechar = button.querySelector('.ico-fechar');
+  const closeMenu = () => {
+    menu.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'Abrir menu');
+    if (iconAbrir) iconAbrir.removeAttribute('hidden');
+    if (iconFechar) iconFechar.setAttribute('hidden', '');
+  };
+  const toggleMenu = () => {
+    const opening = menu.hidden;
+    menu.hidden = !opening;
+    button.setAttribute('aria-expanded', String(opening));
+    button.setAttribute('aria-label', opening ? 'Fechar menu' : 'Abrir menu');
+    if (iconAbrir) {
+      if (opening) iconAbrir.setAttribute('hidden', '');
+      else iconAbrir.removeAttribute('hidden');
+    }
+    if (iconFechar) {
+      if (opening) iconFechar.removeAttribute('hidden');
+      else iconFechar.setAttribute('hidden', '');
+    }
+  };
+  button.addEventListener('click', toggleMenu);
+  menu.querySelectorAll('[data-fecha-menu]').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+})();
+
+// Garantia de clique e redirecionamento para varejo
+document.querySelectorAll('a[href^="varejo.html"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const target = link.getAttribute('href');
+    if (target) {
+      window.location.href = target;
+    }
+  });
+});
+</script>
+</body>
+</html>
