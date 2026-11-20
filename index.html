@@ -76,6 +76,9 @@ a{color:var(--hyper-cyan);transition:color .15s} a:hover{color:var(--glow-cyan)}
 :focus-visible{outline:2px solid var(--hyper-cyan);outline-offset:3px}
 .wrap{max-width:1240px;margin:0 auto;padding-inline:24px}
 .hero-wrapper .wrap{padding-inline:0;max-width:100%;margin:0;}
+@media(max-width:860px){
+  .hero-wrapper .wrap{padding-inline:16px;}
+}
 .cond{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-0.03em;line-height:.95;margin:0;text-transform:uppercase}
 
 /* =========================================================
@@ -361,7 +364,7 @@ a{color:var(--hyper-cyan);transition:color .15s} a:hover{color:var(--glow-cyan)}
   background-image:
     linear-gradient(to right, #000000 0%, #000000 32%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 100%),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 8%, transparent 90%, #000000 100%),
-    url('imgs/hero-custom.jpg');
+    url('imgs/hero-neon.png');
   background-repeat:no-repeat;
   background-position:center center;
   background-size:cover; height:100vh;
@@ -436,6 +439,25 @@ a{color:var(--hyper-cyan);transition:color .15s} a:hover{color:var(--glow-cyan)}
 .actions{display:flex;flex-wrap:wrap;gap:14px}
 
 /* Highlights Grid Sob o Hero */
+@media (max-width: 480px) {
+  .hero-wrapper {
+    height:auto;
+    min-height:100vh;
+  }
+  .hero {
+    padding-block:12px 32px;
+  }
+  .hero h1 {
+    font-size: clamp(28px,8vw,48px);
+  }
+  .hero-desc {
+    font-size:14px;
+  }
+  .hero-content {
+    padding-inline:16px;
+    width:100%;
+  }
+}
 .hero-badges{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
@@ -726,6 +748,8 @@ footer .wrap{
   .marcas-label { font-size: 11px; padding: 0 14px 0 18px; }
 }
 @media(max-width:768px){
+  .nav-desktop{display:none}
+  .btn-menu-mobile{display:inline-flex}
   .wrap{padding-inline:16px}
   .topbar-inner{padding-block:12px;gap:12px}
   .marcas { padding: 10px 0; }
@@ -733,9 +757,10 @@ footer .wrap{
   .mq-item { font-size: 16px; gap: 16px; padding-right: 16px; }
   .hero-wrapper{
     background-image:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.92) 50%, #000000 100%),
-      url('imgs/hero-custom.jpg');
-    background-position:center center;
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.55) 50%, #000000 100%),
+      url('imgs/hero-neon.png');
+    background-position:70% center;
+    background-size:cover;
   }
   .hero{padding-block:20px 44px;gap:20px}
   .hero h1{font-size:clamp(36px, 9vw, 54px)}
@@ -771,7 +796,7 @@ footer .wrap{
   <div class="wrap topbar-inner">
     <!-- Logotipo da Marca (preparado para JPEG ou SVG) -->
     <a class="logo" href="index.html" aria-label="CLUB GLOW — Início">
-      <img src="glowclub-logo.svg" alt="Club Glow" width="260" height="78" class="logo-img" id="site-logo">
+      <img src="imgs/logo-new.png" alt="Club Glow" width="260" height="78" class="logo-img" id="site-logo">
     </a>
 
     <!-- Navegação (Atacado, Varejo, Marcas, Conteúdos, Ferramentas, Instagram) -->
